@@ -42,7 +42,7 @@
     width: 100%;
     margin: auto;
 }
-.nav-item{margin-bottom: .5rem;}
+.nav-item{margin-bottom: 0rem;}
 .navbar-nav .nav-link.active, .navbar-nav .show>.nav-link {
     color: #864BF2;
     background-color: #DFDBFF;
@@ -59,7 +59,7 @@
     margin-top: -99%;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-}  
+}   
 .mystyle2 {
     width: 10px;
     height: 20px;
@@ -117,30 +117,35 @@
     position: fixed;
     bottom: 3rem;
 }
+.card-body {
+    padding: .1rem;
+}
 
-
+element.style {
+    background-color: red !important;
+}
 
 
 @media screen and (max-width: 1440px) {
-    .mystyle1 {margin-top: -95%;}  
-    .mystyle2 {margin-top: -75%;}
-    .mystyle3 {margin-top: -57%;} 
-    .mystyle4 {margin-top: -37%;}
-    .mystyle5 {margin-top: -17%;}
+    .mystyle1 {margin-top: -75%;}  
+    .mystyle2 {margin-top: -59%;}
+    .mystyle3 {margin-top: -45%;} 
+    .mystyle4 {margin-top: -29%;}
+    .mystyle5 {margin-top: -14%;}
 }
 @media screen and (max-width: 1370px) {
-    .mystyle1 {margin-top: -101%;}  
-    .mystyle2 {margin-top: -80%;}
-    .mystyle3 {margin-top: -60%;} 
-    .mystyle4 {margin-top: -39%;}
-    .mystyle5 {margin-top: -18%;}
+    .mystyle1 {margin-top: -80%;}  
+    .mystyle2 {margin-top: -64%;}
+    .mystyle3 {margin-top: -48%;} 
+    .mystyle4 {margin-top: -29%;}
+    .mystyle5 {margin-top: -10%;}
 }
 @media screen and (max-width: 1024px) {
     .mystyle1 {margin-top: -148%;}  
     .mystyle2 {margin-top: -118%;}
     .mystyle3 {margin-top: -88%;} 
-    .mystyle4 {margin-top: -57%;}
-    .mystyle5 {margin-top: -27%;}
+    .mystyle4 {margin-top: -60%;}
+    .mystyle5 {margin-top: -50%;}
 }
 @media screen and (max-width: 992px) {
     .my_search{

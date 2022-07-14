@@ -33,10 +33,14 @@
                               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                   <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="#"><i class="fa-solid fa-sliders menu_icon_size"></i></a>
+                                    <a class="nav-link" aria-current="page" href="#">
+                                      <img src="assets/img/topMenu/Group 26.png"  style="width: 25px;height: 25px;">
+                                    </a>
                                   </li>
                                   <li class="nav-item">
-                                    <a class="nav-link" href="#"><i class="fa-solid fa-user menu_icon_size"></i></a>
+                                    <a class="nav-link" href="#">
+                                      <img src="assets/img/topMenu/woman 1.png" style="width: 25px;height: 25px;">
+                                    </a>
                                   </li>
                                   <li class="nav-item">
                                     <a class="nav-link" href="#"><i class="fa-solid fa-comment-dots menu_icon_size"></i></a>
@@ -60,84 +64,95 @@
                     
                 </div>
                 <div class="row content">
-                    <div class="pt-3">
-                        <div class="table-responsive my_table px-3 mb-3">
-                            <table class="table">
-                                <thead class="">
-
-                                  <!-- <tr>
-                                    <th scope="col" style="color: transparent;">Action  dsds</th>
-                                    <th scope="col">
-                                        <div class="dropdown">
-                                          <a class="btn btn-white dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" style="color: #B8B7B7;border: 1px solid #B8B7B7;">
-                                            Views
-                                          </a>
-                                        </div>
-                                      </th>
-                                      <th scope="col">
-                                        <div class="dropdown">
-                                          <a class="btn btn-white dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" style="color: #B8B7B7;border: 1px solid #B8B7B7;">
-                                            Date
-                                          </a>
-                                        </div>
-                                      </th>
-                                      <th scope="col">
-                                        <div class="dropdown">
-                                          <a class="btn btn-white dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" style="color: #B8B7B7;border: 1px solid #B8B7B7;">
-                                            Author
-                                          </a>
-                                        </div>
-                                      </th>
-                                      <th scope="col">
-                                        <div class="dropdown">
-                                          <a class="btn btn-white dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" style="color: #B8B7B7;border: 1px solid #B8B7B7;">
-                                            Level
-                                          </a>
-                                        </div>
-                                      </th>
-                                      <th scope="col">
-                                        <div class="dropdown">
-                                          <a class="btn btn-white dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" style="color: #B8B7B7;border: 1px solid #B8B7B7;">
-                                            Semester
-                                          </a>
-                                        </div>
-                                      </th>
-                                      <th scope="col">
-                                        <div class="dropdown">
-                                          <a class="btn btn-white dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" style="color: #B8B7B7;border: 1px solid #B8B7B7;">
-                                            Material
-                                          </a>
-                                        </div>
-                                    </th>
-                                    <th scope="col" style="color: #B8B7B7;text-align: end; padding: 1rem 2rem;"> <span style="color: transparent;">sdfssdsdvc</span>  Subject</th>
-                                  </tr> -->
-
-                                </thead>
-                              </table>
-                        </div>
-                        <div class="table-responsive my_table px-3">
-                            <table class="table">
-                                <tbody>
-
-                                  <!-- <tr>
-                                    <th scope="row" style="border-right: 1px solid #DEE2E6;">
-                                      <img src="assets/img/delete.png" alt="" style="width: 20px;height: 20px;">
-                                      <img src="assets/img/edit.png" alt="" style="width: 20px;height: 20px;">
-                                      <img src="assets/img/flag.png" alt="" style="width: 20px;height: 20px;">
-                                    </th>
-                                    <td>235 View</td>
-                                    <td>05.02.2022</td>
-                                    <td>Mohamed's</td>
-                                    <td>3AM</td>
-                                    <td>1st semester</td>
-                                    <td>Math</td>
-                                    <td> <span class="px-2">Lorem ipsum dolor sit</span> <img src="assets/img/rulers.svg" alt="" style="width:30px;height:30px;background-color:white;border-radius: .3rem; box-shadow: 0px 0px 3px gray; padding: .1rem;"> </td>
-                                  </tr> -->
-
-                                </tbody>
-                              </table>
-                        </div>
+                  <div class="col-lg-8 my-4" style="background-color: white; margin: auto; border: 1px solid #E6CCF2; border-radius: .5rem;">
+                    <div class="row pb-2 pt-3">
+                      <div class="col d-flex justify-content-center">
+                        <button class="btn btn-outline-primary me-3">Private</button>
+                        <button class="btn btn-primary ms-3">Private</button>
+                      </div>
                     </div>
+                    <form method="post" action="" enctype="multipart/form-data" class="form-control" style="border:none;">
+                    <div class="row">
+                      <div class="col d-flex justify-content-center my-2">
+                        <div class="row" style="width: 250px; height: 50px; border: 1px solid gray; border-radius: .5rem;">
+                           <div class="col-10">
+                                <select id="sub" name="level" style="width:100%; height: 45px; cursor:pointer;border:none;background-color:transparent;">
+                                    <option value="" selected hidden>Level</option>
+                                    <option value="3AM">3AM</option>
+                                    <option value="2AM">2AM</option>
+                                    <option value="3PM">3PM</option>
+                                </select>
+                           </div>
+                           <div class="col-2">
+                               <img src="assets/img/level.png" alt="" style="width: 30px;height: 30px; margin-top: 8px;">
+                           </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col d-flex justify-content-center my-2">
+                        <div class="row" style="width: 250px; height: 50px; border: 1px solid gray; border-radius: .5rem;">
+                           <div class="col-10">
+                                <select id="sub" name="material" style="width:100%; height: 45px; cursor:pointer;border:none;background-color:transparent;">
+                                    <option value="" selected hidden>Material</option>
+                                    <option value="Math">Math</option>
+                                    <option value="English">English</option>
+                                    <option value="Arabic">Arabic</option>
+                                </select>
+                           </div>
+                           <div class="col-2">
+                               <img src="assets/img/material.png" alt="" style="width: 30px;height: 30px; margin-top: 8px;">
+                           </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col d-flex justify-content-center my-2">
+                        <div class="row" style="width: 250px; height: 50px; border: 1px solid gray; border-radius: .5rem;">
+                           <div class="col-10">
+                               <!--<input type="test" name="subject" placeholder="Semester" class="form-control" style="border: none;text-align:end">-->
+                               <select id="sub" name="semester" style="width:100%; height: 45px; cursor:pointer;border:none;background-color:transparent;">
+                                    <option value="" selected hidden>Semester</option>
+                                    <option value="1st Semester">1st Semester</option>
+                                    <option value="2nd Semester">2nd Semester</option>
+                                    <option value="3rd Semester">3rd Semester</option>
+                                </select>
+                           </div>
+                           <div class="col-2">
+                               <img src="assets/img/semester.png" alt="" style="width: 30px;height: 30px; margin-top: 8px;">
+                           </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col d-flex justify-content-center my-1">
+                        <div class="row" style="width: 300px; height: 38px; border: 1px solid gray; border-radius: .5rem; cursor:pointer;">
+                           <div class="col-10">
+                               <input type="test" name="subject" placeholder="--------------    Subject" class="form-control" style="border: none;text-align:end">
+                           </div>
+                           <div class="col-2">
+                               <img src="assets/img/subject.png" alt="" style="width: 30px;height: 30px;">
+                           </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col d-flex justify-content-center my-1">
+                        <div style="width: 300px; height: 100px; border: 1px dashed gray; border-radius: .5rem; cursor:pointer;">
+                          <label for="file_pdf"><i class="fa-brands fa-youtube" style="font-size: 2rem;color: #864BF2;padding: 2rem 8rem; cursor:pointer;"></i></label> 
+                          <input type="file" name="file" id="file_pdf" class="form-control" style="display: none; visibility: none;">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row py-3">
+                      <div class="col d-flex justify-content-center">
+                        <a class="btn btn-outline-primary me-3" href="show_videos.html">Save and Publish</a>
+                        <a class="btn btn-outline-primary me-3" href="show_videos.html">Save as Draft</a>
+                      </div>
+                    </div>
+                    </form>
+
+                  </div>
                 </div>
             </div>
             <div class="col-2 sidebar">
