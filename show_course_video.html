@@ -10,66 +10,57 @@
           src: url(assets/fonts/Montserrat-Arabic-Regular.ttf);
           font-family: myFont;
       }
-      
-      *{
-          width: 1440px;
-          height: 900px;
-          margin-top: 0px;
-          margin-left: 0px;
-          position: relative;
+      :root {
+        --purpleGradient: linear-gradient(180deg, #864BF2 0%, #6C56F7 100%);
+        --purple: #864BF2;
+        --white: #FFFFFF;
+        --grayLight: #F8F8F8;
+        --grayDark: #DFDBFF;
+        --secondary: #B8B7B7;
+        --black: #000000;
+        --blackLight: #173042;
+        --borderGray: #DDD6FF;
       }
-      .left{
-          width: 1181px;
-          height: 900px;
-          margin-top: 0px;
-          margin-left: 0px;
-          background: #F7F8FA;
-          position: relative;
+      body{
+        color: var(--black);
+        background: var(--grayLight);
+        width: 1440px;
+        height: 900px;
+        position: relative;
       }
-      .right{
-          height: 900.0000073909723px;
-          width: 259.0000150799733px;
-          left: 1181.0000610351562px;
-          top: 0.00030517578125px;
-          border-radius: 0px;
-          background: linear-gradient(180deg, #864BF2 0%, #6C56F7 100%);
-          position: absolute;
-          top: 0;
-          
+      body.dark-mode {
+        --purpleGradient: linear-gradient(180deg, #272727 0%, #464646 100%);
+        --purple: #271d38;
+        --white: #000000;
+        --black: #FFFFFF;
+        --grayLight: #494949;
+        --grayDark: #DFDBFF;
+        --secondary: #B8B7B7;
+        --blackLight: #173042;
+        --borderGray: #DDD6FF;
       }
-      .topMenu{
-          height: 72.00000333785965px;
-          width: 1181.0000516772197px;
-          left: 0px;
-          top: 0.00030517578125px;
-          border-radius: 0px;
-          background: #FFFFFF;    
+
+.dark-switch, .light-switch {position: absolute;right: 0;transform: translateY(-16px);opacity: 0;pointer-events: none;display: flex;transition: all 500ms;}
+.dark-switch.active, .light-switch.active {opacity: 1;cursor: pointer;pointer-events: auto;transform: translateY(0);}
+
+
+      @media screen and (max-width: 2560px) {body{width: 2560px;}}
+      @media screen and (max-width: 1440px) {body{width: 1440px;}}
+      @media screen and (max-width: 1024px) {body{width: 1024px;}}
+      @media screen and (max-width: 768px) {
+        .right{display: none;}
+        .left{width: 708px;}
+        .mobialeRight{display: block !important;}
+        body{width: 768px;}
       }
-      
-      .search{
-          height: 40.999996185302734px;
-          width: 419.9999694824219px;
-          left: 733.0000610351562px;
-          top: 15.00030517578125px;
-          border-radius: 10px;
-          background: #F8F8F8;
-          
-      }
-          </style>
+    </style>
   </head>
   <body>
     
-    <div class="main">
-        <div class="left">
-            <div class="topMenu">
-              <img src="assets/img/settingsIcon.png" style="
-              height: 26.999998092651367px;
-              width: 26.999998092651367px;
-              left: 30.0001220703125px;
-              top: 22.00030517578125px;
-              border-radius: 0px;
-              position: absolute;
-              ">
+    <div class="main" style="margin: auto;">
+        <div class="left" style="width: 1181px;height: 900px;margin-top: 0px;margin-left: 0px;position: relative;">
+            <div class="topMenu" style="height: 72.00000333785965px;width: 1181.0000516772197px;left: 0px;top: 0.00030517578125px;border-radius: 0px;background: var(--white); ">
+              <a href="settings.html"><img src="assets/img/settingsIcon.png" style="height: 26.999998092651367px;width: 26.999998092651367px;left: 30.0001220703125px;top: 22.00030517578125px;border-radius: 0px;position: absolute;"></a>
               <img src="assets/img/woman 1.png" style="
               height: 43.999996185302734px;
               width: 43.999996185302734px;
@@ -94,32 +85,12 @@
               border-radius: 0px;
               position: absolute;
               ">
-                <div class="search">
-                    <p style="
-                    height: 32.999996185302734px;
-                    width: 228.99998474121094px;
-                    left: 128px;
-                    top: 6px;
-                    border-radius: nullpx;
-                    position: absolute;
-                    font-family: myFont;
-                    font-size: 20px;
-                    font-weight: 400;
-                    line-height: 24px;
-                    letter-spacing: 0em;
-                    text-align: right;
-                    color: #B8B7B7;
-
-                    ">Search here</p>
-                    <img src="assets/img/searchIcon.png" style="
-                      height: 29.921215057373047px;
-                      width: 34.831661224365234px;
-                      left: 366px;
-                      top: 1.7px;
-                      border-radius: 0px;
-                      position: absolute;
-                    ">
-                </div>
+              <div class="dark-switch active" style="left: 249px;top: 17px;height: 35px;width: 35px;border-radius: 0px;position: absolute;"><img src="assets/img/dark-switch.svg"  style="height: 35px;width: 35px;"></div>
+              <div class="light-switch" style="left: 249px;top: 17.00030517578125px;height: 35px;width: 35px;border-radius: 0px;position: absolute;"><img src="assets/img/light-switch.svg" style="height: 35px;width: 35px;"></div>
+              <div class="search" style="height: 41px;width: 420px;left: 733px;top: 15px;border-radius: 10px;background: var(--grayLight);position: absolute;">
+                    <p style="height: 32.999996185302734px;width: 228.99998474121094px;left: 128px;top: 6px;border-radius: nullpx;position: absolute;font-family: myFont;font-size: 20px;font-weight: 400;line-height: 24px;letter-spacing: 0em;text-align: right;color: var(--secondary);">Search here</p>
+                    <img src="assets/img/searchIcon.png" style="height: 29.921215057373047px;width: 34.831661224365234px;left: 366px;top: 1.7px;border-radius: 0px;position: absolute;">
+              </div>
             </div>
             <div style="height: 759.9999389648438px;
             width: 917.9999389648438px;
@@ -197,7 +168,7 @@ color: #173042;
               <img src="assets/img/youtube.png" style="height: 14.000000119209233px;width: 14.000000119209233px;left: 9px;top: 149px;position: absolute;">
             </div>
         </div>
-        <div class="right">
+        <div class="right" style="height: 900.0000073909723px;width: 259.0000150799733px;left: 1181.0000610351562px;top: 0.00030517578125px;border-radius: 0px;background: var(--purpleGradient);position: absolute;top: 0; ">
           <img src="assets/img/lms v2 EN/Layer 2.png" style="height: 32.519535064697266px;width: 73.42321014404297px;margin-top: 17px;margin-left: 13px;">
           <img src="assets/img/lms v2 EN/Layer 3.png" style="height: 28.143692016601562px;width: 139.99998474121094px;left: 101px;top: 19px;position: absolute;">
           
@@ -235,8 +206,45 @@ color: #173042;
     position: absolute;
     ">
         </div>
+        <div class="mobialeRight" style="height: 900.0000073909723px;width: 65px;left: 1181.0000610351562px;top: 0px;border-radius: 0px;position: absolute;background: var(--purpleGradient);display: none;">
+          <a href="">
+            <img src="assets/img/Layer 2.png" style="height: 24.324275970458984px;width: 54.919803619384766px;left: 6px;top: 22px;border-radius: 0px;position: absolute;">
+          </a>
+  
+          <a href=""> <img src="assets/img/home.png" style="height: 16.49465844066981px;width: 23.583006406843197px;left: 25px;top: 200px;border-radius: 0px;position: absolute;"> </a>
+          <a href=""> <img src="assets/img/courses.png" style="height: 16.49465844066981px;width: 23.583006406843197px;left: 25px;top: 240px;border-radius: 0px;position: absolute;"> </a>
+          <a href=""> <img src="assets/img/exams.png" style="height: 16.49465844066981px;width: 23.583006406843197px;left: 25px;top: 282px;border-radius: 0px;position: absolute;"> </a>
+          <a href=""> <img src="assets/img/videos.png" style="height: 16.49465844066981px;width: 23.583006406843197px;left: 25px;top: 324px;border-radius: 0px;position: absolute;"> </a>
+          <a href=""> <img src="assets/img/accounts.png" style="height: 16.49465844066981px;width: 23.583006406843197px;left: 25px;top: 373px;border-radius: 0px;position: absolute;"> </a>
+  
+          </div>
     </div>
     
+    <script>
+      const darkSwitch = document.querySelector(".dark-switch");
+      const lightSwitch = document.querySelector(".light-switch");
+      const body = document.querySelector("body");
+      
+      if (localStorage.getItem("darkMode")) {
+        body.classList.add("dark-mode");
+        darkSwitch.classList.remove("active");
+        lightSwitch.classList.add("active");
+      }
+      
+      darkSwitch.addEventListener("click", () => {
+        body.classList.add("dark-mode");
+        darkSwitch.classList.remove("active");
+        lightSwitch.classList.add("active");
+        localStorage.setItem("darkMode", "true");
+      });
+      
+      lightSwitch.addEventListener("click", () => {
+        body.classList.remove("dark-mode");
+        darkSwitch.classList.add("active");
+        lightSwitch.classList.remove("active");
+        localStorage.removeItem("darkMode");
+      });      
+          </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
   </body>
